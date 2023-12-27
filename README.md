@@ -1,5 +1,5 @@
 # Deformability Cytometry
-Omar Saubry[^1], Mehmet Furkan Doğan[^2], Matthieu Scharffe[^2], Charles De Fournas[^2], and Cemal Kaan Köse[^2]\
+Omar Saubry[^1], Mehmet Furkan Doğan[^2], Matthieu Scharffe[^2], Charles De Fournas[^2], and Cemal Kaan Köse[^2]
 [^1]: Section of Life Sciences Engineering, École Polytechnique Fédérale de Lausanne
 [^2]: Section of Mechanical Engineering, École Polytechnique Fédérale de Lausanne
 
