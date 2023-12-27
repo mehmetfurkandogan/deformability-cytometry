@@ -1,3 +1,8 @@
+# Data are not included in the repository due to their large size
+*.tif
+*.tiff
+*.avi
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
