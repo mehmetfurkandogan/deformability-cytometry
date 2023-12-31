@@ -1,4 +1,4 @@
-# Deformability Cytometry
+# Decoding Biological Elegance: Unveiling the Intricacies of Gene ME480 through the Lens of Deformability Cytometry
 Omar Saubry[^1], Mehmet Furkan Doğan[^2], Matthieu Scharffe[^2], Charles De Fournas[^2], and Cemal Kaan Köse[^2]
 [^1]: Section of Life Sciences Engineering, École Polytechnique Fédérale de Lausanne
 [^2]: Section of Mechanical Engineering, École Polytechnique Fédérale de Lausanne
@@ -13,3 +13,4 @@ This repository contains the necessary codes for the analysis of microscopy data
 
 ## Data
 Data files are not included in the repository due to their large size. All data should be placed under the "Data" folder in a way that the folder structure is not altered. (under the subfolders "PartA", "PartB"" and "PartC")
+
