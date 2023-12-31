@@ -3,6 +3,7 @@
 # The output video file is a TIFF stack with the same number of frames as the input video file.
 # The output video file contains the segmented cells.
 # The segmentation is performed using the Cellpose library.
+# Mehmet Furkan Doğan - December 2023
 ######################################################################## IMPORT LIBRARIES
 from halo import Halo
 spinner = Halo(text='Importing libraries... ', text_color= 'magenta', color='magenta', spinner='dots')

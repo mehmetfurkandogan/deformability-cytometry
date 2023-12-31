@@ -2,6 +2,7 @@
 # The segmentation results are visualized using Matplotlib.
 # It is used to evaluate the performance of Cellpose on a single frame and to estimate the time needed to process the whole video.
 # The input parameters such as the model type and the diameter of the cells can be adjusted as needed.
+# Mehmet Furkan Doğan - December 2023
 ######################################################################## IMPORT LIBRARIES
 from halo import Halo
 spinner = Halo(text='Importing libraries... ', text_color= 'magenta', color='magenta', spinner='dots')

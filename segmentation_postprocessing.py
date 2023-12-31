@@ -1,4 +1,5 @@
-# This script is used to postprocess the segmentated video and calculate the deformation metrics.
+# This script is used to postprocess the segmentated video and calculate the deformation metrics for deformability cytometry experiments.
+# Mehmet Furkan Doğan - December 2023
 ######################################################################## IMPORT LIBRARIES
 from halo import Halo
 spinner = Halo(text='Importing libraries... ', text_color= 'magenta', color='magenta', spinner='dots')
