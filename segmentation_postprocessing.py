@@ -30,7 +30,7 @@ def postprocess(input_video_name):
         csvwriter.writerow(['Frame Index', 'Area Convex (px^2)', 'Area Measured (px^2)', 'Area (microns^2)',
                              'Width (px)', 'Height (px)', 'Width (microns)', 'Height (microns)',
                              'Aspect Ratio', 'Porosity', 'Brightness', 'Deformation',
-                             'Inertia Ratio', 'Principal Inertia Ratio'])
+                             'Inertia Ratio', 'Principal Inertia Ratio', 'Poisson Ratio'])
     # Initialize counters
     zero_cell_counter = 0
     one_cell_counter = 0
@@ -102,6 +102,10 @@ def postprocess(input_video_name):
                 # Principal inertia ratio
                 principal_inertia_ratio = I2 / I1 if I1 != 0 else 0
 
+                # Poisson ratio
+                R_cell = 0.5 * np.sqrt(h*w)
+                nu = (2*R_cell - w)/(h - 2*R_cell) if h != 2*R_cell else 0
+
 
             # save in csv file
             with open(output_csv_file, 'a', newline='') as csvfile:
@@ -110,7 +114,8 @@ def postprocess(input_video_name):
                                     w,h,round(w_um,4),round(h_um,4),
                                     round(aspect,4),round(porosity,4),
                                     round(bright_avg,4),round(deformation,4),
-                                    round(inertia_ratio,4),round(principal_inertia_ratio,4)])
+                                    round(inertia_ratio,4),round(principal_inertia_ratio,4),
+                                    round(nu,4)])
         else:
             multiple_cell_counter+=1
             continue

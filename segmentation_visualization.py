@@ -41,8 +41,6 @@ plt.scatter(CellB_ME480['Area (microns^2)'], CellB_ME480['Brightness'], label='C
 plt.xlabel('Area [$\mu m^2$]')  # x-axis label
 plt.ylabel('Brightness [a.u]')  # y-axis label
 plt.legend()  # To show legend
-# Save as eps
-plt.savefig('Results\PartC\BrightnessVsArea.eps', format='eps')
 # Save as pdf
 plt.savefig('Results\PartC\BrightnessVsArea.pdf', format='pdf')
 plt.show()
@@ -58,6 +56,40 @@ plt.ylabel('Deformation')  # y-axis label
 plt.legend()  # To show legend
 # Save as pdf
 plt.savefig('Results\PartC\DeformationVsArea.pdf', format='pdf')
+plt.show()
+
+########################## MEAN DEFORMATIONS ##########################
+Deformation_all=[CellA_GFP['Deformation'],CellA_ShME480['Deformation'],CellB_GFP['Deformation'],CellB_ME480['Deformation']]
+Deformation_mean=np.zeros(4)
+Deformation_std=np.zeros(4)
+
+Area_all=[CellA_GFP['Area (microns^2)'],CellA_ShME480['Area (microns^2)'],CellB_GFP['Area (microns^2)'],
+                   CellB_ME480['Area (microns^2)']]
+Area_mean=np.zeros(4)
+Area_std=np.zeros(4)
+
+for i in range(4):
+    Area_mean[i]=np.mean(Area_all[i])
+    Area_std[i]=np.std(Area_all[i])
+    
+    Deformation_mean[i]=np.mean(Deformation_all[i])
+    Deformation_std[i]=np.std(Deformation_all[i])
+
+plt.figure(figsize=(8,6))
+#plt.ylim(-0.05, 0.65) 
+#plt.xlim(0, 1750)
+
+Label=['CellA_GFP','CellA_ShME480','CellB_GFP','CellB_ME480']
+
+for i in range(4):
+    plt.errorbar(Area_mean[i],Deformation_mean[i],xerr=Area_std[i],yerr=Deformation_std[i], fmt="o", label=Label[i])
+
+plt.legend()
+plt.grid()
+plt.xlabel('Area [$\mu m^2$]')  # x-axis label
+plt.ylabel('Deformation')  # y-axis label
+# Save as pdf
+plt.savefig('Results\PartC\DeformationVsArea_errorbar.pdf', format='pdf')
 plt.show()
 
 ########################## POROSITY VS INERTIA RATIO ##########################
